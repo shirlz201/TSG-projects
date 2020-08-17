@@ -1,0 +1,61 @@
+> com.ss.BlogMastery.models
+ +User
+  -id : int
+  -name : String
+  -userName : String
+  -password : String
+  -email : String
+  -enabled : boolean
+  -roles : Set<Role>
+ +Role
+  -id : int 
+  -role : String
+ +BlogPost
+  -id : int
+  -title : String
+  -imagePath : String
+  -isPublished : boolean
+  -isStatic : boolean
+  -timePosted : LocalDateTime
+  -hashTag : List<HashTag> 
+  -user : User
+ +HashTag
+  - id : int
+  - name : String
+ +Comment
+  - id : int
+  - content : String
+  - timePosted : LocalDateTime
+  - author : String
+  - blogPost : BlogPost
+> com.ss.BlogMastery.dao
+ +UserDaoDb
+  -createUser(User user) : User
+  -getUserByUsername(String userName) : User
+  -getUserById(int id) : User
+  -getAllUsers() : List<User>
+  -updateUser(User user) : void
+  -deleteUser(int id) : void
+
+ +RoleDaoDb
+  -createRole(Role role) : Role
+  -getRoleByRole(String Role): Role 
+  -getRoleById(int id) : Role
+  -getAllRoles() : List<Role>
+  -updateRole(Role role) : void
+  -deleteRole(int id) : void 
+ +BlogPostDaoDb
+  -createBlogPost(Blogpost blogPost) : BlogPost
+  -getBlogPostById(int id) : BlogPost
+  
+ +HashTagDaoDb
+> com.ss.BlogMastery.controller
+ +AdminController
+ +ContentController
+ +HomeController
+ +LoginController
+> com.ss.BlogMastery.service
+> com.ss.BlogMastery.config
+    +PWEnc
+    +SecurityConfig
+    +SpringWebAppInitializer

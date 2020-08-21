@@ -1,0 +1,25 @@
+.hrline{
+    border: 1px solid black;
+}
+.vmheader {
+    font-family: 'Lexend Tera', sans-serif;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+}
+#side-forms{
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+
+}
+.selection{
+    background: silver;
+    border: 1px solid black;
+    width: 25%;
+    text-align: center;
+    padding: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 15px 5px 5px 5px;
+
+}
